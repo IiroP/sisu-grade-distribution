@@ -1,6 +1,6 @@
 {
     "manifest_version":3,
-    "version":"1.2.0",
+    "version":"1.2.0.1",
     "name":"Sisu grade distribution",
     "description": "An extension for showing the grade distribution for courses in Sisu",
     "content_scripts": [
@@ -20,7 +20,7 @@
       }
     ],
     "background": {
-      "service_worker": "background.js"
+      "scripts": ["background.js"]
     },
     "permissions": [
       "tabs",
@@ -48,5 +48,10 @@
         "https://sisu.tuni.fi/*",
         "https://sisu.arcada.fi/*"
       ]
-    }]
+    }],
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "sisugrades@iirop"
+      }
+    }
 }
