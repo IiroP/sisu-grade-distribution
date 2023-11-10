@@ -13,10 +13,10 @@ var injectChart = async () => {
 
     var title = document.createElement("h3")
     var titleText = lang === "fi" ? "Julkinen arvosanajakauma" : lang === "sv" ? "Publik betygsspridning" : "Public grade distribution"
-    title.innerHTML = titleText
+    title.textContent = titleText
 
     var downloadCsvButton = document.createElement("button")
-    downloadCsvButton.innerHTML = lang === "fi" ? "Lataa CSV" : lang === "sv" ? "Ladda ner CSV" : "Download CSV"
+    downloadCsvButton.textContent = lang === "fi" ? "Lataa CSV" : lang === "sv" ? "Ladda ner CSV" : "Download CSV"
     downloadCsvButton.style.float = "right"
     downloadCsvButton.className = "btn btn-lg btn-primary"
     downloadCsvButton.onclick = () => {
@@ -32,7 +32,7 @@ var injectChart = async () => {
     }
 
     var downloadPngButton = document.createElement("button")
-    downloadPngButton.innerHTML = lang === "fi" ? "Lataa PNG" : lang === "sv" ? "Ladda ner PNG" : "Download PNG"
+    downloadPngButton.textContent = lang === "fi" ? "Lataa PNG" : lang === "sv" ? "Ladda ner PNG" : "Download PNG"
     downloadPngButton.style.float = "right"
     downloadPngButton.className = "btn btn-lg btn-primary"
     downloadPngButton.onclick = () => {
